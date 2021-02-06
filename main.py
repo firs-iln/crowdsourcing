@@ -216,7 +216,8 @@ def nearest_choice():
     unic1 = request.cookies.get('unic1')
     map_file = rf"static\images\mapc{unic1}.png"
     if request.method == 'GET':
-        url = 'https://search-maps.yandex.ru/v1/?apikey=cc07eedd-a85f-455b-a13c-c562f847c953'
+        apikey = input()
+        url = 'https://search-maps.yandex.ru/v1/?apikey={apikey}'
         url += f"&text={quote(request.cookies.get('kind'))}"
         url += '&lang=ru_RU'
         db = Database('user.db')
