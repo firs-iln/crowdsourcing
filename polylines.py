@@ -7,7 +7,7 @@ def find_line(mode, origin, destination):
     print(origin)
     destination = ','.join(reversed(destination.split(',')))
     print(destination)
-    apikey = 'UFxVXR8hvIufas9Ea3xQPcIE86T68lQm4VpBHI68f-E'
+    apikey = input()
     url = f"https://router.hereapi.com/v8/routes?transportMode={mode}&origin={origin}&destination={destination}&return=polyline&apikey={apikey}"
     print(url)
     response = requests.get(url)
